@@ -3,7 +3,7 @@ const startBtn = document.querySelector('button[data-start]');
 const stopBtn = document.querySelector('button[data-stop]');
 // bodyEl.style.textAlign = "center";
 let timerId = null;
-isActive = () => !!timerId;
+const isActive = () => !!timerId;
 startBtn.addEventListener('click', () => {
     if (!isActive()) {
         timerId = setInterval(() => {
