@@ -28,10 +28,10 @@ const options = {
     }
   },
 };
-const fp = flatpickr("#datetime-picker", options);
+const calendar = flatpickr("#datetime-picker", options);
 
 function start() {
-  fp.destroy();
+  calendar.destroy();
   if (isActive) {
     return;
   }
@@ -43,6 +43,7 @@ function start() {
     if (distance < 0) {
       clearInterval(intervalId);
       isActive = false;
+      const calendar = flatpickr("#datetime-picker", options);
       return;
     }
     updateClockFace(convertMs(distance));
